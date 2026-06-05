@@ -36,7 +36,7 @@
 - [Looker Studio Dashboard](#-looker-studio-dashboard)
 - [Example Conversations](#-example-conversations)
 - [Troubleshooting](#-troubleshooting)
-- [Repositorie](#-repositorie)
+- [Repository](#-repository)
 
 ---
 
@@ -612,11 +612,11 @@ Agent: 🏥 VM Health Check — dhg-vaccine-rateauto-nonpord
 
 ---
 
-## 🔗 Repositorie
+## 🔗 Repository
 
 | Repository | Purpose | Deploy Order |
 |---|---|---|
-| [`gcp-vm-inventory-agent`](https://github.com/bikram-singh/gcp-vm-inventory-agent) | **This repo** — AI VM Inventory Agent | ✅ Any time |
+| [`gcp-vm-inventory-agent`](https://github.com/bikram-singh/gcp-vm-inventory-agent) | AI VM Inventory Agent | ✅ Any time |
 
 ---
 
