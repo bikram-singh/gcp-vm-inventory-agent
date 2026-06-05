@@ -72,7 +72,7 @@ Rather than manually logging into the GCP console to check VM status, this agent
 
 ## 🏛️ Architecture
 
-![GCP VM Agent Architecture](docs/gallery/gcp_vm_agent_architecture_v2.png)
+![GCP VM Agent Architecture](docs/gallery/gcp_vm_agent_architecture.png)
 
 > The diagram shows the complete data flow from the Developer through the ADK Agent, across all GCP services, to BigQuery, Looker Studio, and Slack.
 
