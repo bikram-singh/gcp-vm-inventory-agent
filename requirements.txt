@@ -1,0 +1,12 @@
+google-cloud-compute
+google-cloud-monitoring
+google-cloud-resource-manager
+google-cloud-bigquery
+google-cloud-bigquery-storage
+pyarrow
+google-adk
+pandas
+openpyxl
+jinja2
+python-dotenv
+slack-sdk

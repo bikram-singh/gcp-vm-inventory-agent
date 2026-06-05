@@ -1,0 +1,24 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Environment & Secrets
+.env
+adc-credentials.json
+*.json.key
+sa-key.json
+
+# ADK
+.adk/
+
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
