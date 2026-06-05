@@ -36,7 +36,7 @@
 - [Looker Studio Dashboard](#-looker-studio-dashboard)
 - [Example Conversations](#-example-conversations)
 - [Troubleshooting](#-troubleshooting)
-- [Related Repositories](#-related-repositories)
+- [Repositorie](#-repositorie)
 
 ---
 
@@ -612,14 +612,10 @@ Agent: 🏥 VM Health Check — dhg-vaccine-rateauto-nonpord
 
 ---
 
-## 🔗 Related Repositories
+## 🔗 Repositorie
 
 | Repository | Purpose | Deploy Order |
 |---|---|---|
-| [`dhg-rateauto-tf-vpc`](https://github.com/bikram-singh/dhg-rateauto-tf-vpc) | VPC, Subnet, Cloud Router, NAT | 1️⃣ First |
-| [`dhg-rateauto-tf-postgres`](https://github.com/bikram-singh/dhg-rateauto-tf-postgres) | Cloud SQL PostgreSQL + PSC | 2️⃣ Parallel |
-| [`dhg-rateauto-tf-gke`](https://github.com/bikram-singh/dhg-rateauto-tf-gke) | GKE Autopilot Cluster | 2️⃣ Parallel |
-| [`dhg-rateauto-tf-gcs-buckets`](https://github.com/bikram-singh/dhg-rateauto-tf-gcs-buckets) | GCS Bucket Provisioning | 3️⃣ Independent |
 | [`gcp-vm-inventory-agent`](https://github.com/bikram-singh/gcp-vm-inventory-agent) | **This repo** — AI VM Inventory Agent | ✅ Any time |
 
 ---
