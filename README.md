@@ -72,40 +72,20 @@ Rather than manually logging into the GCP console to check VM status, this agent
 
 ## 🏛️ Architecture
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    Natural Language Input                        │
-│         "Run full pipeline for dhg-vaccine-rateauto-nonpord"    │
-└──────────────────────────┬──────────────────────────────────────┘
-                           │
-                           ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                    ADK Root Agent                                │
-│              Gemini 2.5 Flash Lite · agent/agent.py             │
-│         Understands intent · Selects tools · Chains calls       │
-└──────┬──────────┬──────────────┬──────────────┬────────────────┘
-       │          │              │              │
-       ▼          ▼              ▼              ▼
-  ┌─────────┐ ┌──────────┐ ┌──────────┐ ┌──────────────┐
-  │ Tool 1  │ │  Tool 2  │ │  Tool 3  │ │    Tool 4    │
-  │  fetch  │ │  check   │ │  push    │ │    send      │
-  │   vm    │ │  health  │ │   BQ     │ │    slack     │
-  │inventory│ │          │ │          │ │notification  │
-  └────┬────┘ └────┬─────┘ └────┬─────┘ └──────┬───────┘
-       │           │            │              │
-       ▼           ▼            ▼              ▼
-  ┌─────────┐ ┌──────────┐ ┌──────────┐ ┌──────────────┐
-  │  GCP    │ │  Excel   │ │BigQuery  │ │    Slack     │
-  │Compute  │ │  Report  │ │vm_details│ │  #gcm-vm-    │
-  │   API   │ │  .xlsx   │ │  table   │ │  inventory   │
-  └─────────┘ └──────────┘ └────┬─────┘ └──────────────┘
-                                 │
-                                 ▼
-                         ┌──────────────┐
-                         │Looker Studio │
-                         │  Dashboard   │
-                         └──────────────┘
-```
+![GCP VM Agent Architecture](docs/gallery/gcp_vm_agent_architecture_v2.png)
+
+> The diagram shows the complete data flow from the Developer through the ADK Agent, across all GCP services, to BigQuery, Looker Studio, and Slack.
+
+### 🔄 Layer Breakdown
+
+| Layer | Components |
+|---|---|
+| **User Layer** | Developer / Operator → ADK Web UI → Gemini 2.5 Flash Lite |
+| **AI Agent Layer** | ADK Agent () · IAM/ADC Authentication |
+| **GCP Services Layer** | Compute Engine API · Cloud Monitoring · Resource Manager API · Guest Attributes API |
+| **Data Layer** |  · Excel Report (.xlsx) · BigQuery () |
+| **Visualization Layer** | Looker Studio Dashboard (connected to BigQuery) |
+| **Notification Layer** | Slack Block Kit messages + Excel file attachment |
 
 ### 🔄 Full Pipeline Flow
 
