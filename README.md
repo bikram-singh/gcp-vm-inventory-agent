@@ -593,18 +593,13 @@ Agent: 🏥 VM Health Check — dhg-vaccine-rateauto-nonpord
 ---
 
 ## 🔗 Repository
-
-| Repository | Purpose |
-|---|---|---|
-| [`gcp-vm-inventory-agent`](https://github.com/bikram-singh/gcp-vm-inventory-agent) | AI VM Inventory Agent |
-
----
+RepositoryPurposegcp-vm-inventory-agentAI-Powered GCP VM Inventory Agent
 
 <div align="center">
-
-**Maintained by Bikram Singh**
-
-`dhg-vaccine-rateauto-nonpord` · `us-central1` · Google Cloud Platform
+Maintained by Bikram Singh
+dhg-vaccine-rateauto-nonpord · us-central1 · Google Cloud Platform
+Built with Google ADK · Gemini · BigQuery · Slack
+</div>
 
 *Built with Google ADK · Gemini · BigQuery · Slack*
 
