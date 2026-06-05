@@ -594,9 +594,9 @@ Agent: 🏥 VM Health Check — dhg-vaccine-rateauto-nonpord
 
 ## 🔗 Repository
 
-| Repository | Purpose | Deploy Order |
+| Repository | Purpose |
 |---|---|---|
-| [`gcp-vm-inventory-agent`](https://github.com/bikram-singh/gcp-vm-inventory-agent) | AI VM Inventory Agent | ✅ Any time |
+| [`gcp-vm-inventory-agent`](https://github.com/bikram-singh/gcp-vm-inventory-agent) | AI VM Inventory Agent |
 
 ---
 
