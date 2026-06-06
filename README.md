@@ -35,7 +35,7 @@
 - [Slack Notifications](#-slack-notifications)
 - [Looker Studio Dashboard](#-looker-studio-dashboard)
 - [Example Conversations](#-example-conversations)
-- [Troubleshooting](#-troubleshooting)
+- [Snapshots](#-snapshots)
 - [Repository](#-repository)
 
 ---
@@ -575,20 +575,35 @@ Agent: 🏥 VM Health Check — dhg-vaccine-rateauto-nonpord
 
 ---
 
-## 🔧 Troubleshooting
+## 📸 Snapshots
 
-| Error | Cause | Fix |
-|---|---|---|
-| `adk: command not found` | ADK not installed or not in PATH | `pip install google-adk` then `export PATH="$HOME/.local/bin:$PATH"` |
-| `404 NOT_FOUND` model error | Gemini model name outdated | Change model to `gemini-2.5-flash-lite` in `agent/agent.py` |
-| `invalid_grant: Bad Request` | ADC token expired | Re-run `gcloud auth application-default login` and update `adc-credentials.json` |
-| `Failed to create session` | ADK agent name mismatch or missing API key | Ensure `name="agent"` in `agent.py` and `GOOGLE_API_KEY` is set |
-| `instance_id int64 to pyarrow` | Type mismatch in BigQuery push | Update `push_to_bigquery.py` — instance_id must be cast to STRING |
-| `503 UNAVAILABLE` Gemini | Model overloaded | Switch to `gemini-2.5-flash-lite` which has lower demand |
-| `RAM usage: None` | Ops Agent not installed on VM | Install [Google Cloud Ops Agent](https://cloud.google.com/stackdriver/docs/solutions/agents/ops-agent) on VMs |
-| `Hostname: None` | Guest attributes disabled | Enable guest attributes on the VM |
-| Looker Studio shows 0 | Date range excludes today | Change scorecard default date range from `Last 28 days (exclude today)` to `This week` |
-| Slack `not_in_channel` | Bot not invited | Run `/invite @GCP VM Inventory Bot` in the target channel |
+### 1️⃣ ADK Web UI — Agent Running
+![ADK Web UI](docs/snapshots/1_adk_web_ui.png)
+
+---
+
+### 2️⃣ Full Pipeline Execution — All 4 Tools Chained
+![Full Pipeline](docs/snapshots/2_full_pipeline_execution.png)
+
+---
+
+### 3️⃣ Excel Report — VM Inventory (26 Columns)
+![Excel Report](docs/snapshots/3_excel_report.png)
+
+---
+
+### 4️⃣ BigQuery Table — vm_details
+![BigQuery Table](docs/snapshots/4_bigquery_table.png)
+
+---
+
+### 5️⃣ Slack Notification — Rich Block Kit Report + Excel Attachment
+![Slack Notification](docs/snapshots/5_slack_notification.png)
+
+---
+
+### 6️⃣ Looker Studio Dashboard
+![Looker Studio Dashboard](docs/snapshots/6_looker_studio_dashboard.png)
 
 ---
 
