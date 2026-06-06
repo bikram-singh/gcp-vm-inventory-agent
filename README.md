@@ -14,7 +14,7 @@
 
 ---
 
-*An AI-powered GCP VM inventory agent built with Google Agent Development Kit (ADK). Scans all virtual machines across GCP projects, performs health checks, pushes data to BigQuery for historical analytics, and sends rich formatted reports to Slack — all triggered by a single natural language command.*
+*An AI-powered GCP VM inventory agent built with Google Agent Development Kit (ADK). Scans all virtual machines across GCP projects, performs health checks, pushes data to BigQuery for historical analytics, and sends rich formatted reports to Slack - all triggered by a single natural language command.*
 
 </div>
 
@@ -577,27 +577,27 @@ Agent: 🏥 VM Health Check — dhg-vaccine-rateauto-nonpord
 
 ## 📸 Snapshots
 
-### 1️⃣ ADK Web UI — Agent Running
+### 1️⃣ ADK Web UI - Agent Running
 ![ADK Web UI](docs/snapshots/1_adk_web_ui.png)
 
 ---
 
-### 2️⃣ Full Pipeline Execution — All 4 Tools Chained
+### 2️⃣ Full Pipeline Execution - All 4 Tools Chained
 ![Full Pipeline](docs/snapshots/2_full_pipeline_execution.png)
 
 ---
 
-### 3️⃣ Excel Report — VM Inventory (26 Columns)
+### 3️⃣ Excel Report - VM Inventory
 ![Excel Report](docs/snapshots/3_excel_report.png)
 
 ---
 
-### 4️⃣ BigQuery Table — vm_details
+### 4️⃣ BigQuery Table - vm_details
 ![BigQuery Table](docs/snapshots/4_bigquery_table.png)
 
 ---
 
-### 5️⃣ Slack Notification — Rich Block Kit Report + Excel Attachment
+### 5️⃣ Slack Notification - Rich Block Kit Report + Excel Attachment
 ![Slack Notification](docs/snapshots/5_slack_notification.png)
 
 ---
